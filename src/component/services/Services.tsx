@@ -2,11 +2,11 @@ import { servicesDetail } from './servicesDetail';
 
 export default function Services() {
   return (
-    <div className='flex justify-center items-center flex-col text-white py-20 px-10'>
+    <div className='flex justify-center items-center flex-col text-white py-20 px-10 gapBtw  gapTop'>
       <div>
-        <h2 className='light:text-[#050044] dark:text-[white] text-[34px] text-center text-3xl md:text-4xl fonty-bold text-white mb-8'>What We Deliver</h2>
+        <h2 className='light:text-[#050044] dark:text-[white] text-[34px] text-center text-3xl md:text-4xl fonty-bold text-white mb-8 gapTop'>What We Deliver</h2>
       </div>
-      <div className='flex items-start justify-center flex-wrap gap-5 w-full p-9'>
+      <div className='flex items-start justify-center flex-wrap gap-5 w-full p-9 gapTop'>
         {
           servicesDetail?.map((item, idx) => (
             <div className='flex items-start justify-center gap-2 text-left max-w-sm w-full'>

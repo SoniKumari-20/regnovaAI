@@ -2,7 +2,7 @@ const auditTypes: any = ["SOC 1", "SOC 2", "SOX", "PCI-DSS", "HIPAA", "GDPR", "F
 
 export default function AuditTypes() {
   return (
-    <div className='py-[80px] w-full flex items-center justify-center flex-col ' >
+    <div className='pb-18 w-full flex items-center justify-center flex-col gapBtw ' >
       <div>
         <h3 className="text-[28px] md:text-[34px] font-bold mb-4">Audit Types</h3>
       </div>

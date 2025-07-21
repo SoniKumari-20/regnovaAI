@@ -43,7 +43,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button onClick={() => setOpen(!open)}>
-              {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {open ? <X className="h-6 w-6 text-black" /> : <Menu className="h-6 w-6 text-black" />}
             </button>
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-[#00113A] px-4 pb-4 space-y-2">
+        <div className="md:hidden bg-[#00113A] px-4 pb-4 space-y-2 text-center">
           <a href="#" className="block py-2 hover:text-blue-400">
             Home
           </a>

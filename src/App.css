@@ -50,3 +50,24 @@ h1, h2, h3, h4, h5, h6{
   margin-bottom: 0;
   color: white;
 }
+
+/* responsive design */
+@media (max-width:425px) and (min-width:375px) {
+  .footer{
+    text-align: center;
+  }
+  .socialMedia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .aboutusSpacing{
+    gap: 10px;
+  }
+  .gapBtw{
+    padding-bottom: 20px;
+  }
+  .gapTop{
+    padding-top: 20px;
+  }
+ }

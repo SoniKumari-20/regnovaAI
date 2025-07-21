@@ -2,8 +2,8 @@ export default function WelcomePage() {
 
   return (
     <section>
-      <div className='w-full bg-[#051a4f]'>
-        <div className="max-w-7xl  w-full flex flex-col items-center text-center py-16 px-4">
+      <div className='w-full flex justify-center'>
+        <div className="max-w-7xl  w-full flex flex-col items-center text-center py-18 px-4 gapBtw">
           <p className="text-blue-400 text-base mb-2">Welcome to RegnovaAI</p>
           <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4 text-white">
             Strategically Manage Risk,

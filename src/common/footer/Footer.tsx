@@ -3,10 +3,10 @@ import logo from "../../assets/Maskgroup.svg";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#000A25] text-gray-300 text-sm w-full">
-      <div className="max-w-7xl w-full mx-auto py-10 px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+    <footer className="bg-[#000A25] text-gray-300 text-sm w-full ">
+      <div className="max-w-7xl w-full mx-auto py-10 px-4 md:px-8 grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
         {/* Logo */}
-        <div className="flex items-center gap-2 text-xl font-bold h-[123px] w-[123px]">
+        <div className="flex items-center gap-2 text-xl font-bold h-[123px] w-[123px] footer">
           <img
             src={logo}
             alt="RegnovaAI"
@@ -15,7 +15,7 @@ export default function Footer() {
         </div>
 
         {/* Quick links */}
-        <div className="text-left">
+        <div className="text-left footer">
           <h4 className="text-white font-semibold mb-4">Quick links</h4>
           <ul className="space-y-2">
             <li className="hover:text-white cursor-pointer">Home</li>
@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
 
         {/* Audit types */}
-        <div className="text-left">
+        <div className="text-left footer">
           <h4 className="text-white font-semibold mb-4">Audit Types</h4>
           <ul className="space-y-2">
             <li>SOC 1</li>
@@ -42,15 +42,15 @@ export default function Footer() {
         </div>
 
         {/* Contact and social */}
-        <div className="text-left">
+        <div className="text-left footer">
           <h4 className="text-white font-semibold mb-4">Contact Us</h4>
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-2 mb-2 socialMedia">
             <Phone className="w-4 h-4" /> <span>+49 176 76897872</span>
           </div>
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-2 mb-2 socialMedia">
             <Mail className="w-4 h-4" /> <span>founder@regnovaai.com</span>
           </div>
-          <div className="flex items-start gap-2 mb-4">
+          <div className="flex items-start gap-2 mb-4 socialMedia">
             <MapPin className="w-4 h-4 mt-1" />
             <span>
               71-75, Shelton Street, Covent Garden, London, WC2H 9JQ, United
@@ -58,15 +58,15 @@ export default function Footer() {
             </span>
           </div>
         </div>
-        <div className="text-left flex flex-col">
+        <div className="text-left flex flex-col footer">
           <h4 className="text-white font-semibold mb-3">Social media</h4>
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-2 mb-2 socialMedia">
             <Twitter className="w-5 h-5" /> <span>Twitter</span>
           </div>
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-2 mb-2 socialMedia">
             <Facebook className="w-5 h-5" /> <span>Facebook</span>
           </div>
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-2 mb-2 socialMedia">
             <Instagram className="w-5 h-5" /> <span>Instagram</span>
           </div>
         </div>

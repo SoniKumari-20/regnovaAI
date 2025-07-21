@@ -1,18 +1,22 @@
+import React from "react";
+import { CheckCircle } from "lucide-react";
 
-const plans = [
-  {
-    title: "Essential",
-    price: "$369",
-    features: [
-      "2 Audits",
-      "50 AI Risk Reports",
-      "Policy Check",
-      "PDF output",
-      "Free 30 days trial",
-    ],
-    button: "Registered",
-    highlighted: false,
-  },
+interface Plan {
+  title: string;
+  price: string;
+  features: string[];
+  buttonText: string;
+  highlighted?: boolean;
+}
+const features = [
+  "2 Audits",
+  "50 AI Risk Reports",
+  "Policy Check",
+  "PDF output",
+  "Free 30 days trial",
+]
+
+const plans: Plan[] = [
   {
     title: "Team",
     price: "$2499",
@@ -24,7 +28,7 @@ const plans = [
       "PDF/CSV output",
       "Free 7 days trial",
     ],
-    button: "Buy Plan",
+    buttonText: "Buy Plan",
     highlighted: true,
   },
   {
@@ -39,7 +43,7 @@ const plans = [
       "PDF/CSV/JSON output",
       "Alert Scheduler",
     ],
-    button: "Buy Plan",
+    buttonText: "Buy Plan",
     highlighted: true,
   },
   {
@@ -55,54 +59,81 @@ const plans = [
       "Alert Scheduler",
       "API",
       "Account Manager",
-      "Full Customisation",
+      "Full customisation",
     ],
-    button: "Buy Plan",
+    buttonText: "Buy Plan",
     highlighted: true,
   },
 ];
 
-export default function PricingPlans() {
+const PricingPlans: React.FC = () => {
   return (
-    <div className="w-full py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Pricing grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <section className="w-full md:py-18 sm:py-10 px-4">
+      <div className="max-w-7xl w-full mx-auto  bg-[#000A25] flex flex-col md:flex-row justify-center gap-6 py-[32px] rounded-[20px]">
+        <div
+          className={`flex flex-col justify-between rounded-xl p-6 w-full md:w-1/3 lg:w-1/4
+              "bg-[#031133] text-white"}`}
+        >
+          {/* Title */}
+          <h3 className="text-xl font-semibold mb-2">Essential</h3>
+          {/* Price */}
+          <p className="text-5xl font-bold mb-1 text-white">$369</p>
+          <p className="text-sm opacity-80 mb-4 text-white">Valid for 12 months</p>
+
+          {/* Features */}
+          <ul className="flex-1 space-y-2 mb-6 text-white">
+            {features.map((feature, fIdx) => (
+              <li key={fIdx} className="flex items-start gap-2 text-sm">
+                <CheckCircle className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          {/* Button */}
+          <button
+            className={`mt-auto py-2 rounded-md font-medium transition-colors duration-300 
+                bg-blue-600 text-white hover:bg-blue-700`
+            }
+          >
+            Registered
+          </button>
+        </div>
+        <div
+          className={`flex justify-between flex-wrap rounded-xl p-6 max-w-3xl w-full
+             bg-white text-black shadow-lg p-[32px]`}
+        >
           {plans.map((plan, idx) => (
-            <div
-              key={idx}
-              className={`flex flex-col rounded-xl p-6 ${plan.highlighted
-                  ? "bg-white text-gray-900 shadow-lg border border-blue-400"
-                  : "bg-[#06183C] text-white"
-                }`}
-            >
-              <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                <span>◉</span> {plan.title}
-              </h3>
+            <div key={idx} className="flex flex-col">
+              {/* Title */}
+              <h3 className="text-xl font-semibold mb-2 text-black">{plan.title}</h3>
+              {/* Price */}
               <p className="text-4xl font-bold mb-1">{plan.price}</p>
-              <p className="text-sm mb-6 opacity-80">Valid for 12 months</p>
-              <ul className="flex-1 mb-6 space-y-3 text-sm">
-                {plan.features.map((f, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-blue-500">✔</span>
-                    <span>{f}</span>
+              <p className="text-sm opacity-80 mb-4">Valid for 12 months</p>
+
+              {/* Features */}
+              <ul className="flex-1 space-y-2 mb-6">
+                {plan.features.map((feature, fIdx) => (
+                  <li key={fIdx} className="flex items-start gap-2 text-sm">
+                    <CheckCircle className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                    <span>{feature}</span>
                   </li>
                 ))}
               </ul>
+
+              {/* Button */}
               <button
-                className={`mt-auto py-2 rounded-md font-medium text-white ${plan.highlighted
-                    ? "bg-blue-600 hover:bg-blue-700"
-                    : "bg-blue-600 hover:bg-blue-700"
-                  }`}
+                className={`mb-auto py-2 rounded-md font-medium transition-colors duration-300  mt-auto 
+                  bg-blue-600 text-white hover:bg-blue-700`}
               >
-                {plan.button}
+                {plan.buttonText}
               </button>
-            </div>
+            </ div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
-
+export default PricingPlans;
