@@ -7,7 +7,7 @@ import bgImg from "../../assets/image1.png";
 
 export default function Home() {
     return (
-        <div className='bg-cover bg-center' style={{ backgroundImage: `url(${bgImg})` }} >
+        <div className='bg-no-repeat bg-cover bg-center' style={{ backgroundImage: `url(${bgImg})` }} >
             <WelcomePage />
             <AuditTypes />
             <AboutUs />

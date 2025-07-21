@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-[#000A25] text-gray-300 text-sm w-full ">
       <div className="max-w-7xl w-full mx-auto py-10 px-4 md:px-8 grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
         {/* Logo */}
-        <div className="flex items-center gap-2 text-xl font-bold h-[123px] w-[123px] footer">
+        <div className="flex items-center gap-2 text-xl font-bold h-[80px] w-[80px] footer">
           <img
             src={logo}
             alt="RegnovaAI"

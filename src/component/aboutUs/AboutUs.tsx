@@ -5,7 +5,7 @@ import thirdImg from "../../assets/Rectangle12.png";
 export default function AboutUs() {
   return (
     <section className='w-full flex items-center justify-center px-[35px]'>
-      <div className="w-full max-w-7xl flex flex-col gap-[80px] aboutusSpacing">
+      <div className="w-full max-w-7xl flex flex-col gap-[30px] aboutusSpacing">
         <div className='flex gap-5 items-center flex-wrap justify-center'>
           <div className="max-w-[486px] w-full rounded-[20px] h-[200px] sm:h-[288px] overflow-hidden">
             <img src={firstImg} alt="" className="w-full h-full object-cover" />

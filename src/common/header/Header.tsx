@@ -9,16 +9,17 @@ export default function Header() {
 
   return (
     <nav className="w-full bg-[#00113A] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-[62px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-3">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center gap-2 text-xl font-bold h-[123px] w-[123px]">
+          <div className="flex items-center justify-center h-[80px] w-[80px]">
             <img
               src={logo}
               alt="RegnovaAI"
-              className="h-[100%] w-[100%] object-contain w-auto"
+              className="h-full w-full object-contain"
             />
           </div>
+
 
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-8 items-center font-medium">
