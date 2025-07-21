@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 interface ComplianceItem {
   name: string;
@@ -62,11 +62,10 @@ export default function AuditTypes() {
           <div
             key={id}
             onClick={() => setSelectedAudit(item)}
-            className={`flex items-center justify-center text-center cursor-pointer font-[600] bg-white w-[280px] border border-[#0A00592B] rounded-[8px] py-[27px] cursor-pointer hover:bg-[#000A25] hover:text-white hover:shadow-[0px_4px_4px_0px_#00000040] transition-colors duration-300 ${
-              selectedAudit?.name === item.name
-                ? "bg-[#000A25] text-white"
+            className={`flex items-center justify-center text-center cursor-pointer font-[600] bg-white w-[280px] border border-[#0A00592B] rounded-[8px] py-[27px] cursor-pointer hover:bg-[#000A25] hover:text-white hover:shadow-[0px_4px_4px_0px_#00000040] transition-colors duration-300 ${selectedAudit?.name === item.name
+                ? "bg-[#000A25]"
                 : ""
-            }`}
+              }`}
           >
             {item.name}
           </div>
@@ -82,6 +81,37 @@ export default function AuditTypes() {
           <p className="text-gray-300 text-sm md:text-base leading-6 whitespace-pre-line mb-6">
             {selectedAudit.description}
           </p>
+          <h3 className="text-lg md:text-xl font-semibold mb-3">Key Points about SOC 2:</h3>
+          <ul className="space-y-2 mb-6 text-gray-300 text-sm md:text-base">
+            <li>
+              <span className="font-bold text-white">1. Security –</span> Protection of system
+              resources from unauthorized access.
+            </li>
+            <li>
+              <span className="font-bold text-white">2. Availability –</span> System
+              accessibility as agreed upon.
+            </li>
+            <li>
+              <span className="font-bold text-white">3. Processing Integrity –</span> System
+              processing is complete, valid, accurate, and timely.
+            </li>
+            <li>
+              <span className="font-bold text-white">4. Confidentiality –</span> Protection of
+              sensitive information.
+            </li>
+            <li>
+              <span className="font-bold text-white">5. Privacy –</span> Proper collection, use,
+              retention, disclosure, and disposal of personal information.
+            </li>
+          </ul>
+
+          {/* Why it matters */}
+          <h3 className="text-lg md:text-xl font-semibold mb-3">Why It Matters:</h3>
+          <ul className="list-disc pl-5 space-y-1 mb-8 text-gray-300 text-sm md:text-base">
+            <li>Enhances customer trust.</li>
+            <li>Helps meet compliance requirements.</li>
+            <li>Demonstrates security maturity to stakeholders and partners.</li>
+          </ul>
           <button className="border border-[#155DFC] hover:bg-blue-500 hover:text-white text-[#155DFC] font-medium px-6 py-2 rounded bg-transparent transition-colors duration-300">
             Start Audit Now
           </button>
