@@ -53,15 +53,15 @@ export default function Header() {
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden bg-[#00113A] px-4 pb-4 space-y-2 text-center">
-          <a href="#" className="block py-2 hover:text-blue-400">
+          <Link to={"/"} className="block py-2 hover:text-blue-400">
             Home
-          </a>
-          <a href="#" className="block py-2 hover:text-blue-400">
+          </Link>
+          <Link to={"/about "} className="block py-2 hover:text-blue-400">
             About us
-          </a>
-          <a href="#" className="block py-2 hover:text-blue-400">
+          </Link>
+          <Link to={"/pricing"} className="block py-2 hover:text-blue-400">
             Pricing
-          </a>
+          </Link>
           <a href="#" className="block py-2 hover:text-blue-400">
             Careers
           </a>
