@@ -58,7 +58,7 @@ export default function Header() {
           </Link>
           <Link to={"/about "} className="block py-2 hover:text-blue-400">
             About us
-          </Link>
+          </Link>    
           <Link to={"/pricing"} className="block py-2 hover:text-blue-400">
             Pricing
           </Link>
